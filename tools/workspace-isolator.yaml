@@ -1,0 +1,17 @@
+name: "workspace-isolator"
+description: "Manages isolated Git worktrees and private credential sandboxes for concurrent agents."
+input_schema:
+  type: "object"
+  properties:
+    pod_id:
+      type: "string"
+      description: "Pod requiring workspace isolation."
+    repo_url:
+      type: "string"
+      description: "Git repository URL."
+    branch:
+      type: "string"
+      description: "Target branch to check out."
+  required:
+    - "pod_id"
+    - "repo_url"

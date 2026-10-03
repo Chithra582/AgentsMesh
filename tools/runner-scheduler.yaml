@@ -1,0 +1,13 @@
+name: "runner-scheduler"
+description: "Schedules agent workloads onto self-hosted runners based on capacity and affinity scoring."
+input_schema:
+  type: "object"
+  properties:
+    workload_spec:
+      type: "object"
+      description: "Workload requirements including CPU, memory, and repository."
+    preferred_runner:
+      type: "string"
+      description: "Optional preferred runner hostname or ID."
+  required:
+    - "workload_spec"

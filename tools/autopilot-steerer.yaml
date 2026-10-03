@@ -1,0 +1,17 @@
+name: "autopilot-steerer"
+description: "Monitors idle pod states, issues sequential instructions, and enforces iteration limits."
+input_schema:
+  type: "object"
+  properties:
+    pod_id:
+      type: "string"
+      description: "Supervised pod identifier."
+    goal:
+      type: "string"
+      description: "High-level goal description for the autonomous run."
+    max_iterations:
+      type: "integer"
+      description: "Maximum allowable autopilot turns."
+  required:
+    - "pod_id"
+    - "goal"

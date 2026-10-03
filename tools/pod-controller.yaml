@@ -1,0 +1,20 @@
+name: "pod-controller"
+description: "Provisions, supervises, pauses, and terminates isolated agent execution pods."
+input_schema:
+  type: "object"
+  properties:
+    action:
+      type: "string"
+      enum:
+        - "create"
+        - "start"
+        - "pause"
+        - "stop"
+        - "destroy"
+      description: "Lifecycle action to perform on the pod."
+    pod_id:
+      type: "string"
+      description: "Target agent pod identifier."
+  required:
+    - "action"
+    - "pod_id"
